@@ -7,7 +7,7 @@ import ru.job4j.chess.firuges.Cell;
 import ru.job4j.chess.firuges.black.*;
 
 public class LogicTest {
-    @Test (expected=ImpossibleMoveException.class)
+    @Test (expected = ImpossibleMoveException.class)
     public void whenFigureMovesInvalid()
             throws OccupiedCellException, FigureNotFoundException, ImpossibleMoveException {
         Logic logic = new Logic();
@@ -15,7 +15,7 @@ public class LogicTest {
         logic.move(Cell.C1, Cell.C2);
     }
 
-    @Test (expected=OccupiedCellException.class)
+    @Test (expected = OccupiedCellException.class)
     public void whenCellIsOccupied()
             throws OccupiedCellException, FigureNotFoundException, ImpossibleMoveException {
         Logic logic = new Logic();
@@ -24,7 +24,7 @@ public class LogicTest {
         logic.move(Cell.C1, Cell.D2);
     }
 
-    @Test (expected=FigureNotFoundException.class)
+    @Test (expected = FigureNotFoundException.class)
     public void whenFigureIsNotExists()
             throws OccupiedCellException, FigureNotFoundException, ImpossibleMoveException {
         Logic logic = new Logic();
